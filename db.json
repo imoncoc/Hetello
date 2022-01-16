@@ -1,0 +1,310 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Stereo HeadPhone",
+      "cookTime": "7-10",
+      "price": 90,
+      "favorite": false,
+      "origins": "China",
+      "stars": 4.5,
+      "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+      "tags": "headphone",
+      "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+    },
+    {
+      "id": 2,
+      "name": "Sony",
+      "price": 299,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "Japan",
+      "stars": 4.7,
+      "imageUrl": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=865&q=80",
+      "tags": "headphone",
+      "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+    },
+    {
+      "id": 3,
+      "name": "Beats",
+      "price": 159,
+      "cookTime": "7-10",
+      "favorite": false,
+      "origins": "California",
+      "stars": 3.5,
+      "imageUrl": "https://images.unsplash.com/photo-1607950689008-58cfcdde6da4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxoZWFkcGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "Headphone",
+      "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+    },
+    {
+      "id": 4,
+      "name": "Black Beats Earbuds",
+      "price": 130,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "California",
+      "stars": 3.3,
+      "imageUrl": "https://images.unsplash.com/photo-1611864583067-b002fdc4fa29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIwfHxoZWFkcGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "headphone",
+      "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+    },
+    {
+      "id": 5,
+      "name": "Sumsung Gears two",
+      "price": 64.99,
+      "cookTime": "7-10",
+      "favorite": false,
+      "origins": "Korea",
+      "stars": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1608280180611-ccbe5e4c589c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTYxfHxoZWFkcGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "headphone",
+      "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+    },
+    {
+      "id": 6,
+      "name": "Ipads",
+      "price": 249,
+      "cookTime": "7-10",
+      "favorite": false,
+      "origins": "UK",
+      "stars": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTY5fHxoZWFkcGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "headphone",
+      "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+    },
+    {
+      "id": 7,
+      "name": "Iphone 13 max pro",
+      "price": 1099,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "UK",
+      "stars": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1632633726696-4245f0f622aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aXBob25lJTIwMTMlMjBwcm8lMjBtYXh8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "tags": "mobile",
+      "description": "Display Contrast ratio Infinite (nominal), Type Li-Ion 4352 mAh, non-removable (16.75 Wh), 128 stroge"
+    },
+    {
+      "id": 8,
+      "name": "Vivo V21e 5G hd",
+      "price": 415.99,
+      "cookTime": "7-10",
+      "favorite": false,
+      "origins": "China",
+      "stars": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1472393365320-db77a5abbecc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dml2b3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "mobile",
+      "description": "V21e presents itself with a 7.67mm trendy slim 3D design. Combined with a 165g light weight, it offers a comfortable, relaxed hold all day."
+    },
+    {
+      "id": 9,
+      "name": "Realme 8 - 8+128 GB",
+      "price": 250,
+      "cookTime": "7-10",
+      "favorite": false,
+      "origins": "China",
+      "stars": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1636390839374-6697e5ef95c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHJlYWxtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "mobile",
+      "description": "NO RETURN applicable if the seal is broken, MediaTek Helio G95 Processor"
+    },
+    {
+      "id": 10,
+      "name": "Nokia G10",
+      "price": 320.99,
+      "cookTime": "7-10",
+      "favorite": false,
+      "origins": "Korea",
+      "stars": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1602870442879-f83a2f8b33c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG5va2lhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "mobile",
+      "description": "Autofocus, depth, LED flash, macro, HDR & more"
+    },
+    {
+      "id": 11,
+      "name": "Oppo",
+      "price": 410,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "China",
+      "stars": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1562254492-377a3ac576f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b3Bwb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "mobile",
+      "description": "60Hz refresh rate, 800 nits max. brightness"
+    },
+    {
+      "id": 12,
+      "name": "OnePlus",
+      "price": 499.99,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "China",
+      "stars": 4.5,
+      "imageUrl": "https://images.unsplash.com/photo-1552830746-ea13d7f797d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG9uZXBsdXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "tags": "mobile",
+      "description": "PDAF, 119º ultrawide, macro, depth, OIS, dual-LED flash & more"
+    },
+    {
+      "id": 13,
+      "name": "Oneplus Charger Cable",
+      "price": 59.5,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "China",
+      "stars": 4.5,
+      "imageUrl": "https://images.unsplash.com/photo-1525972231415-e52a7a56c905?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhcmdlciUyMGNhYmxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "mobile charger",
+      "description": "Fast chargeing cable."
+    },
+    {
+      "id": 14,
+      "name": "Nikkon Camera with 5 lens",
+      "price": 1999,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "China",
+      "stars": 4.5,
+      "imageUrl": "https://images.unsplash.com/photo-1600368140372-9052d7ab55a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGNoYXJnZXIlMjBjYWJsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "camera",
+      "description": "Once you’ve felt the liberating power, speed and performance of a Nikon DSLR, you’ll see why they’re the preferred tool of pro and aspiring photographers everywhere. See your photos and videos come to life with stunning clarity and rich detail through masterly-crafted Nikon DSLR cameras and world-renowned NIKKOR lenses."
+    },
+    {
+      "id": 15,
+      "name": "N95 Mask",
+      "price": 20,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "UK",
+      "stars": 4.5,
+      "imageUrl": "https://images.unsplash.com/photo-1597926576374-c24046ef7cf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bjk1fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "mask",
+      "description": "In areas with high numbers of COVID-19 cases, consider wearing a mask in crowded outdoor settings and for activities with close contact with others who are not fully vaccinated."
+    },
+    {
+      "id": 16,
+      "name": "Dove Body Cream",
+      "price": 24.69,
+      "cookTime": "7-10",
+      "favorite": false,
+      "origins": "UK",
+      "stars": 3.8,
+      "imageUrl": "https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "cream",
+      "description": "Beautiful bodies deserve superior care (that means yours, by the way). Turn everyday routines into a treat with our velvety rich body cream"
+    },
+    {
+      "id": 17,
+      "name": "Neauthy Face Cream",
+      "price": 32.99,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "UK",
+      "stars": 3.8,
+      "imageUrl": "https://images.unsplash.com/photo-1601049413574-214d105b26e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNyZWFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "cream",
+      "description": "Facial screen: light and evanecent texture that feels fresh and pleasant. Basic formula consisting of two main ingredients known for their functional properties: pure helicine and hyaluronic acid. Line suitable for all skin types (dry, mixed and greasy)."
+    },
+    {
+      "id": 18,
+      "name": "REEBOK Men's Sports Shoe",
+      "price": 49.99,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "Bangladesh",
+      "stars": 4.2,
+      "imageUrl": "https://images.unsplash.com/photo-1465877783223-4eba513e27c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "shoes",
+      "description": "Breathable upper for optimum comfort and fit - Lightweight sole to stride with ease"
+    },
+    {
+      "id": 19,
+      "name": "MOOCHIE Women's High Heel",
+      "price": 32.99,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "Bangladesh",
+      "stars": 4.3,
+      "imageUrl": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "shoes",
+      "description": "Pointed toe pumps made of premium quality PU upper for a smooth finish. Animal print heels add a unique spin. The rubber outsole is durable and ensures maximum comfort"
+    },
+    {
+      "id": 20,
+      "name": "SPRINT Men's Sports Shoe",
+      "price": 59.99,
+      "cookTime": "7-10",
+      "favorite": true,
+      "origins": "Bangladesh",
+      "stars": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "tags": "shoes",
+      "description": "Breathable upper material provides maximum comfort and relaxed fit. Lace-up fastening for an adjustable fit. The highly durable and resistant outsole helps you stride with ease"
+    },
+    {
+      "name": "Bit Coin",
+      "price": 50,
+      "tags": "coin",
+      "origins": "UK",
+      "stars": "4",
+      "favorite": "true",
+      "cookTime": "7-10",
+      "imageUrl": "https://images.unsplash.com/photo-1638913658828-afb88c3d4d11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      "description": "Crypto Currency",
+      "id": 21
+    },
+    {
+      "name": "Natural Cream",
+      "price": 99.99,
+      "tags": "cream",
+      "origins": "Japan",
+      "stars": "4",
+      "favorite": "true",
+      "cookTime": "7-10",
+      "imageUrl": "https://media.istockphoto.com/photos/handmade-reuseable-makeup-remover-cloths-creams-in-recyclable-picture-id1282243489?b=1&k=20&m=1282243489&s=170667a&w=0&h=GVMrrjxJh1ILHt_lYXd_efuJ84-zrBQmRkSC88XZ4d0=",
+      "description": "Natural Products",
+      "id": 22
+    },
+    {
+      "name": "Sergical Mask",
+      "price": 0.99,
+      "tags": "mask",
+      "origins": "Bangladesh",
+      "stars": "4",
+      "favorite": "true",
+      "cookTime": "7-10",
+      "imageUrl": "https://images.unsplash.com/photo-1586942593822-268ff3828458?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1hc2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "description": "To Protest covid",
+      "id": 23
+    },
+    {
+      "name": "Basket Ball",
+      "price": 30,
+      "tags": "coin",
+      "origins": "Korea",
+      "stars": "4",
+      "favorite": "true",
+      "cookTime": "7-10",
+      "imageUrl": "https://images.unsplash.com/photo-1642326828805-0d3251cc250f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "description": "Ball",
+      "id": 24
+    }
+  ],
+  "cart": []
+}

@@ -1,0 +1,61 @@
+
+.footer{
+  background-color: #003049;
+  background-color: #081c15;
+  /* background-color: #C5E8E2;
+  background-color: #FDC6C3; */
+  /* background-color: #370617; */
+}
+.footer-front-text{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3.5rem;
+  font-weight: 600;
+  /* color: #d62828;
+  color: #370617; */
+  color: white;
+}
+
+.footer-front-text-p{
+  color: #3d405b;
+}
+.footer-front-text span{
+  /* border: dashed 2px #370617; */
+  border: dashed 2px #d62828;
+  padding: 0.5rem;
+}
+.footer-icon{
+  color: white;
+  /* color: #370617; */
+}
+.icon{
+  font-size: 1.3rem;
+}
+
+p{
+  font-size: 1rem;
+}
+
+.text-own{
+  color: #457b9d;
+  color: #0a9396;
+  color: white;
+}
+
+/* .color{
+  color: #370617;
+  color: #003049;
+  color: #3d405b;
+  color: #264653;
+  color: #f4f1de;
+  color: #eae2b7;
+  color: #f2cc8f;
+  color: #e9c46a;
+  color: #fcbf49;
+  color: #f4a261;
+  color: #e07a5f;
+  color: #e76f51;
+  color: #d62828;
+  color: #f77f00;
+  color: #2a9d8f;
+  color: #81b29a;
+} */

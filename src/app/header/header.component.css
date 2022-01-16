@@ -1,0 +1,129 @@
+/* .banner-image {
+  background: url('../../assets/Images/unsplash-4.jpg') no-repeat center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav-logo{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2.5rem;
+  color: #370617;
+}
+
+.nav-logo:hover{
+  color: #370617;
+}
+
+.nav-link{
+  font-size: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #3d405b !important;
+  opacity: .8;
+}
+
+.nav-link:hover{
+  opacity: 1;
+  color: #003049 !important;
+  color: #370617 !important;
+}
+
+.cart-icon{
+  background-color: #EDA9A8;
+}
+
+.main-text{
+  font-size: 3.5rem;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 5rem;
+  color: #370617;
+}
+
+.navbar-dark .navbar-toggler {
+  color: #370617;
+  border-color: #370617;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.example{
+  background-color: #f4f1de;
+} */
+
+
+
+
+/* New Navar */
+
+.cart-icon{
+  background-color: #EDA9A8;
+}
+header{
+  background: white;
+  background: transparent;
+  padding: 0;
+  /* border-bottom: 1px solid #e72929;
+  border-bottom: 1px solid #F6B9B8; */
+}
+
+.text-kaushan{
+  font-family: 'Kaushan Script', cursive;
+}
+
+a{
+  /* color: #af1313; */
+  color: #370617;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+a:hover{
+  /* background: #e72929;
+  background: #370617; */
+  color: #C7EAE4;
+}
+
+.container{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+a.logo{
+  font-weight: bold;
+  padding: 1em;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li a{
+  padding: 1em;
+  display: inline-block;
+}
+
+/* .color{
+  color: #370617;
+  color: #003049;
+  color: #3d405b;
+  color: #264653;
+  color: #f4f1de;
+  color: #eae2b7;
+  color: #f2cc8f;
+  color: #e9c46a;
+  color: #fcbf49;
+  color: #f4a261;
+  color: #e07a5f;
+  color: #e76f51;
+  color: #d62828;
+  color: #f77f00;
+  color: #2a9d8f;
+  color: #81b29a;
+  color: #F6B9B8;
+  color: #C7EAE4;
+} */

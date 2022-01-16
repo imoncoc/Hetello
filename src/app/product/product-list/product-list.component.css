@@ -1,0 +1,102 @@
+.bg-own{
+  /* background-color: antiquewhite;
+  background-color: #f4f1de; */
+  margin: 0;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a{
+  height: 22.5rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+  /* color: #370617; */
+}
+
+li a:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.content{
+  padding: .5rem 1rem;
+  position: relative;
+}
+
+.favorite{
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+.favorite.not{
+  color: grey;
+}
+
+.stars{
+  margin-bottom: .2rem;
+}
+
+.product-item-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.origins{
+  flex: 9;
+}
+
+.origins span{
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: .7rem;
+  color: gray;
+  margin-right: 0.3rem;
+}
+
+.cook-time{
+  font-size: 0.8rem;
+  flex: 3;
+  text-align: right;
+}
+
+.price{
+  color: #414141;
+  margin-top: 0.7rem;
+}
+
+
+/* .color{
+  color: #370617;
+  color: #003049;
+  color: #3d405b;
+  color: #264653;
+  color: #f4f1de;
+  color: #eae2b7;
+  color: #f2cc8f;
+  color: #e9c46a;
+  color: #fcbf49;
+  color: #f4a261;
+  color: #e07a5f;
+  color: #e76f51;
+  color: #d62828;
+  color: #f77f00;
+  color: #2a9d8f;
+  color: #81b29a;
+} */

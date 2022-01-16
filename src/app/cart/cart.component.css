@@ -1,0 +1,159 @@
+img{
+  height: 20rem;
+}
+
+.empty-cart h5{
+  font-size: 2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.empty-cart h4{
+  font-size: 1.5rem;
+}
+
+.empty-cart h6{
+  font-size: 1.1rem;
+}
+
+.empty-cart button{
+  background-color: #F6B9B8;
+  color: #370617;
+  transition: all 0.3s;
+}
+
+.empty-cart button:hover{
+  background-color: #C7EAE4;
+}
+
+/* .color{
+  color: #370617;
+  color: #003049;
+  color: #3d405b;
+  color: #264653;
+  color: #f4f1de;
+  color: #eae2b7;
+  color: #f2cc8f;
+  color: #e9c46a;
+  color: #fcbf49;
+  color: #f4a261;
+  color: #e07a5f;
+  color: #e76f51;
+  color: #d62828;
+  color: #f77f00;
+  color: #2a9d8f;
+  color: #81b29a;
+  color: #F6B9B8;
+  color: #C7EAE4;
+} */
+
+.margin-top{
+  margin-top: 5rem !important;
+}
+
+
+.container-own{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 1.5rem;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  justify-content: space-evenly;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  list-style-type: none;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+ul li:last-child{
+  border: none;
+}
+
+ul li img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+
+ul li div{
+  padding: 1rem;
+}
+
+ul li div:not(:first-child){
+  flex-basis: 15%;
+}
+
+ul li select{
+  width: 3rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+ul .remove-button{
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+  color: #e72929;
+  opacity: 0.7;
+  outline: none;
+}
+
+ul .remove-button:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 3;
+  height: 20rem;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.checkout>div{
+  font-size: 1.4rem;
+  margin: 1rem;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.checkout .foods-count{
+  margin-bottom: 1.5rem;
+}
+
+.checkout .foods-count::before{
+  content: 'Item: ';
+  color: grey;
+}
+
+.checkout .total-price::before{
+  content: 'Total: ';
+  color: grey;
+}

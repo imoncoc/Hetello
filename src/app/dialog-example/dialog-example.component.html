@@ -1,0 +1,152 @@
+<!-- <p>dialog-example works!</p> -->
+<div class="container">
+  <div class="row justify-content-around">
+    <div class="col-10 p-3">
+      <div>
+        <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()" class="m-2">
+
+
+
+          <mat-form-field class="w-50" appearance="outline">
+            <mat-label>Name</mat-label>
+            <input
+              type="text"
+              name="name"
+              matInput
+              placeholder="Enter Name"
+              formControlName="name"
+            />
+            <mat-hint>Please enter Product Name</mat-hint>
+            <mat-error>Invalid or Empty</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="w-50" appearance="outline">
+            <mat-label>Price</mat-label>
+            <input
+              type="number"
+              name="price"
+              matInput
+              placeholder="Enter Price"
+              formControlName="price"
+            />
+            <mat-hint>Please enter Product Price</mat-hint>
+            <mat-error>Invalid or Empty</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="w-50">
+            <mat-label>Select Tags</mat-label>
+            <mat-select formControlName="tags">
+              <mat-option value="headphone">Headphone</mat-option>
+              <mat-option value="mobile">Mobile</mat-option>
+              <mat-option value="mobile charger">Mobile Charger</mat-option>
+              <mat-option value="camera">Camera</mat-option>
+              <mat-option value="mask">Mask</mat-option>
+              <mat-option value="cream">Cream</mat-option>
+              <mat-option value="shoes">Shoes</mat-option>
+              <mat-option value="coin">Coin</mat-option>
+              <mat-option value="coin">Random</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <mat-form-field appearance="fill" class="w-50">
+            <mat-label>Select Country</mat-label>
+            <mat-select formControlName="origins">
+              <mat-option value="Bangladesh">Bangladesh</mat-option>
+              <mat-option value="China">China</mat-option>
+              <mat-option value="Japan">Japan</mat-option>
+              <mat-option value="Korea">Korea</mat-option>
+              <mat-option value="UK">UK</mat-option>
+              <mat-option value="California">California</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="w-25">
+            <mat-label>Select Rating</mat-label>
+            <mat-select formControlName="stars">
+              <mat-option value="1">1</mat-option>
+              <mat-option value="2">2</mat-option>
+              <mat-option value="3">3</mat-option>
+              <mat-option value="4">4</mat-option>
+              <mat-option value="5">5</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="w-25">
+            <mat-label>Select Favorite</mat-label>
+            <mat-select formControlName="favorite">
+              <mat-option value="true">True</mat-option>
+              <mat-option value="false">False</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="w-50">
+            <mat-label>Select Shipping</mat-label>
+            <mat-select formControlName="cookTime">
+              <mat-option value="7-10">7-10 Days</mat-option>
+              <mat-option value="7-15">7-15 Days</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>ImageUrl</mat-label>
+            <input
+              type="text"
+              name="imageUrl"
+              matInput
+              placeholder="Enter ImageUrl"
+              formControlName="imageUrl"
+            />
+            <mat-hint>Please enter Product ImageUrl</mat-hint>
+            <mat-error>Invalid or Empty</mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>Description</mat-label>
+            <input
+              type="text"
+              name="Description"
+              matInput
+              placeholder="Enter Description"
+              formControlName="description"
+            />
+            <mat-hint>Please enter Product Description</mat-hint>
+            <mat-error>Invalid or Empty</mat-error>
+          </mat-form-field>
+
+
+
+
+
+
+
+
+          <div class="">
+              <button
+              mat-raised-button
+              type="submit"
+              color="primary"
+              class="w-50"
+              [disabled]="!addProductForm.valid"
+              mat-dialog-close
+            >
+              Save Product
+            </button>
+
+              <button
+              mat-raised-button
+              mat-dialog-close
+              color="warn"
+              class="w-50"
+              type="button">Close</button>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

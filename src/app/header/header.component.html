@@ -1,0 +1,59 @@
+ <!-- Navbar  -->
+ <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+  <div class="container">
+    <a class="navbar-brand nav-logo" href="#">Hetello</a>
+    <button
+      class="navbar-toggler"
+      type="button" (click)="isShown = !isShown" [attr.aria-expanded]="isShown"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': isShown }" id="navbarNav">
+      <div class="mx-auto"></div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button routerLink="cart" class="btn cart-icon">
+            <i style="font-size: 30px; color: white;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger"> {{ 0 }} </div>
+        </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<!-- Banner Image  -->
+<!-- <div
+class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+>
+<div class="content text-center">
+  <h1 class="main-text">Hetello E-Commerce</h1>
+</div>
+</div> -->
+
+
+<!-- NEW NAVBAR -->
+<header class="fixed-top">
+  <div class="container">
+    <a href="#" class="logo text-kaushan" routerLink="/">Hetello</a>
+    <nav>
+      <ul>
+        <li>
+          <!-- <a href="#" routerLink="/cart">Cart</a> -->
+          <a>
+            <button routerLink="/cart-page" class="btn cart-icon">
+              <i style="font-size: 30px; color: white;" class="fas fa-cart-plus"></i>
+              <div style="font-size: 10px;" class="badge bg-danger"> {{ totalCartItem }} </div>
+          </button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

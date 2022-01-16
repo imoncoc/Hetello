@@ -1,0 +1,70 @@
+
+<app-home></app-home>
+
+<!-- Sort Function -->
+<div class="container">
+  <div class="row justify-content-end">
+    <div class="col-10 my-3">
+
+      <!-- <mat-form-field>
+        <mat-label>Select sorting</mat-label>
+        <mat-select>
+          <mat-option value="lowToHigh" (click)="sortHighToLow()">Low to High</mat-option>
+          <mat-option value="highToLow" (click)="sortLowToHigh()">High to Low</mat-option>
+        </mat-select>
+      </mat-form-field> -->
+
+      <div class="d-flex justify-content-end">
+        <mat-form-field>
+          <mat-label>Select sorting</mat-label>
+          <mat-select>
+            <mat-option value="lowToHigh" (click)="sortHighToLow()">Low to High</mat-option>
+            <mat-option value="highToLow" (click)="sortLowToHigh()">High to Low</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+          <div class="mx-5">
+            <button mat-raised-button color="primary" (click)="openDialog()">Create new Product</button>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- Products Cart -->
+<div class="bg-own px-3 py-5">
+  <ul>
+    <li *ngFor="let item of products">
+      <a (click)="onSelect(item)" >
+        <img [src]="item.imageUrl" alt="">
+        <div class="content">
+          <div class="name">
+            {{ item.name }}
+          </div>
+          <span class="favorite {{item.favorite? '': 'not'}}">❤</span>
+          <div class="stars">
+            <star-rating [value]="item.stars" [totalstars]="5"
+          checkedcolor="red" uncheckedcolor="black"
+          size="20px" [readonly]="true"
+          ></star-rating>
+          </div>
+          <div class="product-item-footer">
+            <div class="origins">
+              <span > {{item.origins}} </span>
+            </div>
+            <div class="cook-time">
+              <span>🕒</span>
+              {{item.cookTime}}
+            </div>
+          </div>
+          <div class="price">
+            <span> {{item.price | currency}} </span>
+          </div>
+        </div>
+       </a>
+    </li>
+  </ul>
+</div>
