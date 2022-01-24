@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { CartItem } from 'src/app/shared/models/cartItem';
 import { Products } from 'src/app/shared/models/products';
 
@@ -25,7 +26,7 @@ export class CartService {
   }
 
   addProductToCart(product: Products):Observable<any>{
-    return this.http.post(this._cartApi, {quatity: 1, product})
+    return this.http.post(this._cartApi, {quantity: 1, product})
   }
 
   updateProductCart(cardData: CartItem, product: Products): Observable<any>{

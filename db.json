@@ -306,5 +306,118 @@
       "id": 24
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "quantity": 3,
+      "product": {
+        "id": 2,
+        "name": "Sony",
+        "price": 299,
+        "cookTime": "7-10",
+        "favorite": true,
+        "origins": "Japan",
+        "stars": 4.7,
+        "imageUrl": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=865&q=80",
+        "tags": "headphone",
+        "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+      },
+      "id": 1
+    },
+    {
+      "quantity": 2,
+      "product": {
+        "id": 1,
+        "name": "Stereo HeadPhone",
+        "cookTime": "7-10",
+        "price": 90,
+        "favorite": false,
+        "origins": "China",
+        "stars": 4.5,
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "tags": "headphone",
+        "description": "Travel the Star Wars galaxy with these Mandalorian Bluetooth Headphones! The built-in rechargeable battery allows up to 24 hours of continuous playtime, and includes a built-in microphone for talking to friends and family. These also come equipped with parental controlled volume limiters to protect small ears. A bonus detachable 3.5mm audio cable is included so you can connect to any device with a headphone jack. Adjustable headband and padded ear cushions provide maximum comfort and a custom fit. The foldable design is ideal for convenient travel and storage."
+      },
+      "id": 2
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "id": 8,
+        "name": "Vivo V21e 5G hd",
+        "price": 415.99,
+        "cookTime": "7-10",
+        "favorite": false,
+        "origins": "China",
+        "stars": 4,
+        "imageUrl": "https://images.unsplash.com/photo-1472393365320-db77a5abbecc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dml2b3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "tags": "mobile",
+        "description": "V21e presents itself with a 7.67mm trendy slim 3D design. Combined with a 165g light weight, it offers a comfortable, relaxed hold all day."
+      },
+      "id": 3
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "id": 11,
+        "name": "Oppo",
+        "price": 410,
+        "cookTime": "7-10",
+        "favorite": true,
+        "origins": "China",
+        "stars": 4,
+        "imageUrl": "https://images.unsplash.com/photo-1562254492-377a3ac576f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b3Bwb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "tags": "mobile",
+        "description": "60Hz refresh rate, 800 nits max. brightness"
+      },
+      "id": 4
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "id": 14,
+        "name": "Nikkon Camera with 5 lens",
+        "price": 1999,
+        "cookTime": "7-10",
+        "favorite": true,
+        "origins": "China",
+        "stars": 4.5,
+        "imageUrl": "https://images.unsplash.com/photo-1600368140372-9052d7ab55a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGNoYXJnZXIlMjBjYWJsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "tags": "camera",
+        "description": "Once you’ve felt the liberating power, speed and performance of a Nikon DSLR, you’ll see why they’re the preferred tool of pro and aspiring photographers everywhere. See your photos and videos come to life with stunning clarity and rich detail through masterly-crafted Nikon DSLR cameras and world-renowned NIKKOR lenses."
+      },
+      "id": 6
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "name": "Bit Coin",
+        "price": 50,
+        "tags": "coin",
+        "origins": "UK",
+        "stars": "4",
+        "favorite": "true",
+        "cookTime": "7-10",
+        "imageUrl": "https://images.unsplash.com/photo-1638913658828-afb88c3d4d11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+        "description": "Crypto Currency",
+        "id": 21
+      },
+      "id": 9
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "id": 15,
+        "name": "N95 Mask",
+        "price": 20,
+        "cookTime": "7-10",
+        "favorite": true,
+        "origins": "UK",
+        "stars": 4.5,
+        "imageUrl": "https://images.unsplash.com/photo-1597926576374-c24046ef7cf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bjk1fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "tags": "mask",
+        "description": "In areas with high numbers of COVID-19 cases, consider wearing a mask in crowded outdoor settings and for activities with close contact with others who are not fully vaccinated."
+      },
+      "id": 10
+    }
+  ]
 }

@@ -81,6 +81,7 @@
         <div class="foods-count"> {{cartItems.length}} </div>
         <div class="total-price mb-3"> {{cartTotal | currency}} </div>
         <button mat-raised-button color="warn" (click)="clearCart()" (click)="openSnackBar('Clear Cart Successfull')">Clear Cart</button>
+        <button mat-raised-button color="primary" class="mt-2" (click)="openSnackBar('Comming Soon')">Check Out</button>
       </div>
     </div>
 

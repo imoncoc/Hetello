@@ -16,7 +16,8 @@ import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './shared/pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CartComponent,
     HomeComponent,
     SearchComponent,
-    DialogExampleComponent
+    DialogExampleComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialsModule,
     HttpClientModule,
     RatingModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],

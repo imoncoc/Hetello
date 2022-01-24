@@ -38,62 +38,84 @@ export class CartComponent implements OnInit {
     this.loadCartItems();
   }
 
-  handleSubscription() {
+  handleSubscription(){
     this.msg.getMessage().subscribe((product: Products) => {
-      if (product && product.id) {
-        const cartIndex = this.cartItems.findIndex(
-          (data: CartItem) => data.productId === product.id
-        );
-        debugger;
-        if (cartIndex === -1) {
-          this.cartService.addProductToCart(product).subscribe(() => {
-            console.log(product);
-            this.loadCartItems();
-          });
-        } else {
-          const cartData = this.cartItems[cartIndex];
-          cartData.quantity++;
-          this.cartService
-            .updateProductCart(cartData, product)
-            .subscribe((resp) => {
-              if (resp) {
-                this.cartItems[cartIndex] = cartData;
-                this.calcCartTotal();
-              }
-            });
-        }
+      const cartIndex = this.cartItems.findIndex((data: CartItem) => data.productId === product.id);
+      if(cartIndex === -1){
+        this.cartService.addProductToCart(product).subscribe(() => {
+          console.log(product);
+          this.loadCartItems()
+        })
       }
-    });
+      else{
+        const cartData = this.cartItems[cartIndex];
+        cartData.quantity ++;
+        this.cartService.updateProductCart(cartData, product).subscribe((resp) =>{
+          if(resp) {
+            this.cartItems[cartIndex] = cartData;
+            this.calcCartTotal();
+          }
+        })
+      }
+    })
   }
+
+  // handleSubscription() {
+  //   this.msg.getMessage().subscribe((product: Products) => {
+  //     if (product && product.id) {
+  //       const cartIndex = this.cartItems.findIndex(
+  //         (data: CartItem) => data.productId === product.id
+  //       );
+  //       if (cartIndex === -1) {
+  //         this.cartService.addProductToCart(product).subscribe(() => {
+  //           this.loadCartItems();
+  //         });
+  //       } else {
+  //         const cartData = this.cartItems[cartIndex];
+  //         cartData.quantity++;
+  //         this.cartService
+  //           .updateProductCart(cartData, product)
+  //           .subscribe((resp) => {
+  //             if (resp) {
+  //               this.cartItems[cartIndex] = cartData;
+  //               this.calcCartTotal();
+  //             }
+  //           });
+  //       }
+  //     }
+  //   });
+  // }
 
   loadCartItems() {
     this.cartService.getCartItem().subscribe((items: CartItem[]) => {
       this.cartItems = items;
       this.calcCartTotal();
+      this.reloadHeader(this.cartItems.length);
     });
   }
 
   deleteSingleProduct(productId: any) {
     this.cartService.deleteProductById(productId).subscribe((result) => {
-      this.ngOnInit();
+      this.loadCartItems();
     });
   }
 
   calcCartTotal() {
     this.cartTotal = 0;
     this.cartItems.forEach((item: CartItem) => {
-      this.cartTotal += item.quantity * item.price;
+      this.cartTotal += (item.quantity * item.price);
     });
   }
 
   clearCart() {
     this.cartItems.forEach((item: CartItem) => {
       this.http
-        .delete(this._cartApi + '/' + item.id)
+        .delete(this._cartApi + "/" + item.id)
         .subscribe((res: any) => {});
     });
 
     this.cartItems = [];
+    this.reloadHeader(this.cartItems.length);
   }
 
   openSnackBar(message: any) {
@@ -102,5 +124,9 @@ export class CartComponent implements OnInit {
       verticalPosition: this.verticalPosition,
       duration: this.durationInSeconds * 1000,
     });
+  }
+
+  reloadHeader(result: number){
+    this.msg.sendTotalCartItem(result);
   }
 }

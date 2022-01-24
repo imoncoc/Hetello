@@ -6,15 +6,26 @@ import { Products } from 'src/app/shared/models/products';
   providedIn: 'root'
 })
 export class MessageService {
-  subject = new EventEmitter<Products>();
+  cartSubject = new Subject<Products>();
+  totalCartItem = new Subject<number>();
 
   constructor() { }
 
   sendMsg(product: Products){
-    this.subject.emit(product);
+    this.cartSubject.next(product);
   }
 
   getMessage(){
-    return this.subject.asObservable();
+    return this.cartSubject;
   }
+
+  sendTotalCartItem(Totalproduct: number){
+    this.totalCartItem.next(Totalproduct);
+  }
+
+  getTotalCartItem(){
+   return  this.totalCartItem;
+  }
+
+
 }

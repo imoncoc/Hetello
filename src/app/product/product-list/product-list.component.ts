@@ -12,6 +12,8 @@ import { DialogExampleComponent } from 'src/app/dialog-example/dialog-example.co
 })
 export class ProductListComponent implements OnInit {
   products: Products[] = [];
+  searchKey: string = "";
+  public searchTerm: string = '';
 
   constructor(private productsService: ProductsService,
               private router: Router,
@@ -27,8 +29,6 @@ export class ProductListComponent implements OnInit {
         this.productsService.getAllProducts().subscribe((res) => {
           this.products = res
         })
-
-
     })
   }
 
@@ -47,6 +47,7 @@ export class ProductListComponent implements OnInit {
   openDialog(){
     this.dialog.open(DialogExampleComponent);
   }
+
 
 
 }

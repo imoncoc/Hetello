@@ -34,10 +34,12 @@
 </div>
 
 
+
+
     <!-- Products Cart -->
 <div class="bg-own px-3 py-5">
   <ul>
-    <li *ngFor="let item of products">
+    <li *ngFor="let item of products | filter: searchKey: 'name'">
       <a (click)="onSelect(item)" >
         <img [src]="item.imageUrl" alt="">
         <div class="content">
