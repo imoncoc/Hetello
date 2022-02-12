@@ -19,7 +19,8 @@ import { Products } from '../shared/models/products';
 export class CartComponent implements OnInit {
   cartItems: Array<CartItem> = [];
   cartTotal: number = 0;
-  _cartApi = 'http://localhost:3000/cart';
+  // _cartApi = 'http://localhost:3000/cart';
+  _cartApiFirebase = "https://hetello-e-commarce-default-rtdb.firebaseio.com/cart";
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
@@ -39,25 +40,27 @@ export class CartComponent implements OnInit {
   }
 
   handleSubscription(){
-    this.msg.getMessage().subscribe((product: Products) => {
-      const cartIndex = this.cartItems.findIndex((data: CartItem) => data.productId === product.id);
-      if(cartIndex === -1){
-        this.cartService.addProductToCart(product).subscribe(() => {
-          console.log(product);
-          this.loadCartItems()
-        })
-      }
-      else{
-        const cartData = this.cartItems[cartIndex];
-        cartData.quantity ++;
-        this.cartService.updateProductCart(cartData, product).subscribe((resp) =>{
-          if(resp) {
-            this.cartItems[cartIndex] = cartData;
-            this.calcCartTotal();
-          }
-        })
-      }
-    })
+    // this.msg.getMessage().subscribe((product: Products) => {
+    //   debugger
+    //   const cartIndex = this.cartItems.findIndex((data: CartItem) => data.productId === product.id);
+    //   if(cartIndex === -1){
+    //     this.cartService.addProductToCart(product).subscribe(() => {
+    //       console.log(product);
+    //       this.loadCartItems()
+    //     })
+    //   }
+    //   else{
+    //     const cartData = this.cartItems[cartIndex];
+    //     cartData.quantity ++;
+    //     this.cartService.updateProductCart(cartData, product).subscribe((resp) =>{
+    //       debugger
+    //       if(resp) {
+    //         this.cartItems[cartIndex] = cartData;
+    //         this.calcCartTotal();
+    //       }
+    //     })
+    //   }
+    // })
   }
 
   // handleSubscription() {
@@ -110,7 +113,8 @@ export class CartComponent implements OnInit {
   clearCart() {
     this.cartItems.forEach((item: CartItem) => {
       this.http
-        .delete(this._cartApi + "/" + item.id)
+         .delete(`${this._cartApiFirebase}/${item.id}.json`)
+        // .delete(this._cartApi + "/" + item.id)
         .subscribe((res: any) => {});
     });
 

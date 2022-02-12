@@ -9,32 +9,38 @@ import { Products } from 'src/app/shared/models/products';
   providedIn: 'root'
 })
 export class CartService {
-  _cartApi = "http://localhost:3000/cart"
+  // _cartApi = "http://localhost:3000/cart";
+  _cartApiFirebase = "https://hetello-e-commarce-default-rtdb.firebaseio.com/cart";
 
   constructor(private http: HttpClient) { }
 
+
+
   getCartItem(): Observable<CartItem[]>{
-    return this.http.get<CartItem[]>(this._cartApi).pipe(
-      map((result:any[]) => {
+    return this.http.get<CartItem[]>(`${this._cartApiFirebase}.json`).pipe(
+      map((responseData: { [key: string]: any }) => {
         let cartItems: CartItem[] = [];
-        for(let item of result){
-          cartItems.push(new CartItem(item.id, item.product, item.quantity))
+        for(const key in responseData){
+          if(responseData.hasOwnProperty(key)){
+            cartItems.push({ ...responseData[key], id: key});
+          }
+          // console.log(`${cartItems[0].id}`);
         }
         return cartItems;
       })
     )
   }
 
-  addProductToCart(product: Products):Observable<any>{
-    return this.http.post(this._cartApi, {quantity: 1, product})
+  addProductToCart(cartdata: CartItem):Observable<any>{
+    return this.http.post(`${this._cartApiFirebase}.json`, cartdata)
   }
 
   updateProductCart(cardData: CartItem, product: Products): Observable<any>{
-    return this.http.patch(this._cartApi+ "/"+cardData.id, {quantity: cardData.quantity, product})
+    return this.http.patch(`${this._cartApiFirebase}/${cardData.id}.json`,{quantity: cardData.quantity, product})
   }
 
   deleteProductById(id: any){
-    return this.http.delete(`${this._cartApi}/${id}`);
+    return this.http.delete(`${this._cartApiFirebase}/${id}.json`);
   }
 
 

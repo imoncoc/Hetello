@@ -9,6 +9,7 @@ import {
   MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
 import { MatPaginator } from '@angular/material/paginator';
+import { CartItem } from 'src/app/shared/models/cartItem';
 
 @Component({
   selector: 'app-product-details',
@@ -43,6 +44,23 @@ export class ProductDetailsComponent implements OnInit {
 
   handleAddToCart(){
     this.msg.sendMsg(this.dataSource);
+
+    let cartData: CartItem = {
+      productId: this.dataSource.id,
+      productName: this.dataSource.name,
+      quantity: 1,
+      price: this.dataSource.price,
+      imageUrl: this.dataSource.imageUrl
+    }
+
+    this.cartService.addProductToCart(cartData).subscribe((resp) =>{
+      if(resp) {
+        // this.cartItems[cartIndex] = cartData;
+        // this.calcCartTotal();
+        this.openSnackBar();
+      }
+    })
+
   }
 
   // openSnackBar(message: any, action: any){
