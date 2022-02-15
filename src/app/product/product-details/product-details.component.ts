@@ -55,9 +55,11 @@ export class ProductDetailsComponent implements OnInit {
 
     this.cartService.addProductToCart(cartData).subscribe((resp) =>{
       if(resp) {
+        ProductsService.onCartUpdate.emit({status: "Success"});
         // this.cartItems[cartIndex] = cartData;
         // this.calcCartTotal();
         this.openSnackBar();
+
       }
     })
 

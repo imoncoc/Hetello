@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Products } from 'src/app/shared/models/products';
 
@@ -10,6 +10,9 @@ export class ProductsService {
   // _productApi = "http://localhost:3000/products";
   _productApiFirebase = "https://hetello-e-commarce-default-rtdb.firebaseio.com/products";
   public search = new BehaviorSubject<string>("");
+
+  public static onProductSave = new EventEmitter<any>();
+  public static onCartUpdate = new EventEmitter<any>();
 
   constructor(private http: HttpClient) { }
 

@@ -35,33 +35,32 @@ export class CartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.handleSubscription();
     this.loadCartItems();
   }
 
-  handleSubscription(){
-    // this.msg.getMessage().subscribe((product: Products) => {
-    //   debugger
-    //   const cartIndex = this.cartItems.findIndex((data: CartItem) => data.productId === product.id);
-    //   if(cartIndex === -1){
-    //     this.cartService.addProductToCart(product).subscribe(() => {
-    //       console.log(product);
-    //       this.loadCartItems()
-    //     })
-    //   }
-    //   else{
-    //     const cartData = this.cartItems[cartIndex];
-    //     cartData.quantity ++;
-    //     this.cartService.updateProductCart(cartData, product).subscribe((resp) =>{
-    //       debugger
-    //       if(resp) {
-    //         this.cartItems[cartIndex] = cartData;
-    //         this.calcCartTotal();
-    //       }
-    //     })
-    //   }
-    // })
-  }
+  // handleSubscription(){
+  //   this.msg.getMessage().subscribe((product: Products) => {
+  //     debugger
+  //     const cartIndex = this.cartItems.findIndex((data: CartItem) => data.productId === product.id);
+  //     if(cartIndex === -1){
+  //       this.cartService.addProductToCart(product).subscribe(() => {
+  //         console.log(product);
+  //         this.loadCartItems()
+  //       })
+  //     }
+  //     else{
+  //       const cartData = this.cartItems[cartIndex];
+  //       cartData.quantity ++;
+  //       this.cartService.updateProductCart(cartData, product).subscribe((resp) =>{
+  //         debugger
+  //         if(resp) {
+  //           this.cartItems[cartIndex] = cartData;
+  //           this.calcCartTotal();
+  //         }
+  //       })
+  //     }
+  //   })
+  // }
 
   // handleSubscription() {
   //   this.msg.getMessage().subscribe((product: Products) => {

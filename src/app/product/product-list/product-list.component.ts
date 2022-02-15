@@ -26,21 +26,32 @@ export class ProductListComponent implements OnInit {
     //   this.products = res;
     // })
 
-    this.route.params.subscribe(params => {
-        this.productsService.getAllProducts()
-        .pipe(map((responseData: { [key: string]: any}) =>{
-          const postsArray: any[] = [];
-          for(const key in responseData){
-            if(responseData.hasOwnProperty(key)){
-              postsArray.push({ ...responseData[key], id: key});
-            }
-          }
-          return postsArray;
-        }))
-        .subscribe((res) => {
-          this.products = res;
-        })
+    this.productAll();
+
+    ProductsService.onProductSave.subscribe((data) => {
+      debugger
+      this.products.push(data);
     })
+
+
+  }
+
+  productAll(){
+    this.route.params.subscribe(params => {
+      this.productsService.getAllProducts()
+      .pipe(map((responseData: { [key: string]: any}) =>{
+        const postsArray: any[] = [];
+        for(const key in responseData){
+          if(responseData.hasOwnProperty(key)){
+            postsArray.push({ ...responseData[key], id: key});
+          }
+        }
+        return postsArray;
+      }))
+      .subscribe((res) => {
+        this.products = res;
+      })
+  })
   }
 
   onSelect(data:any){
@@ -56,7 +67,7 @@ export class ProductListComponent implements OnInit {
   }
 
   openDialog(){
-    this.dialog.open(DialogExampleComponent);
+    this.dialog.open(DialogExampleComponent)
   }
 
 

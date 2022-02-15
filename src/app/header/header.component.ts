@@ -2,6 +2,8 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { CartService } from '../services/cart/cart.service';
 import { MessageService } from '../services/message/message.service';
+import { ProductsService } from '../services/products/products.service';
+import { CartItem } from '../shared/models/cartItem';
 
 @Component({
   selector: 'app-header',
@@ -19,10 +21,19 @@ export class HeaderComponent implements OnInit {
     // this.cartService.getCartItem().subscribe((result) => {
     //   this.totalCartItem = result.length;
     // })
-    this.msgService.getTotalCartItem().subscribe((result) =>{
-      this.totalCartItem = result;
-    })
+    this.getDataCount();
 
+    ProductsService.onCartUpdate.subscribe(res =>{
+      if (res.status) {
+        this.getDataCount();
+      }
+    });
+  }
+
+  getDataCount() {
+    this.cartService.getCartItem().subscribe((items: CartItem[]) => {
+      this.totalCartItem = items.length;
+    });
   }
 
 

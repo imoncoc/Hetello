@@ -19,12 +19,12 @@ export class CartService {
   getCartItem(): Observable<CartItem[]>{
     return this.http.get<CartItem[]>(`${this._cartApiFirebase}.json`).pipe(
       map((responseData: { [key: string]: any }) => {
-        let cartItems: CartItem[] = [];
+       let cartItems: CartItem[] = [];
         for(const key in responseData){
           if(responseData.hasOwnProperty(key)){
             cartItems.push({ ...responseData[key], id: key});
           }
-          // console.log(`${cartItems[0].id}`);
+
         }
         return cartItems;
       })

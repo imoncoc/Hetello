@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductsService } from '../services/products/products.service';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-example',
@@ -10,7 +11,8 @@ import { ProductsService } from '../services/products/products.service';
 export class DialogExampleComponent implements OnInit {
   addProductForm: FormGroup = new FormGroup({});
 
-  constructor( private productsService: ProductsService) { }
+  constructor( private productsService: ProductsService,
+    private matDialogRef: MatDialogRef<DialogExampleComponent>) { }
 
   ngOnInit(): void {
     this.addProductForm = new FormGroup({
@@ -28,9 +30,24 @@ export class DialogExampleComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.addProductForm.value);
-    this.productsService.saveProductData(this.addProductForm.value).subscribe((result)=>{
+    // console.log(this.addProductForm.value);
+    this.productsService.saveProductData(this.addProductForm.value).subscribe({
+      next: (res: any) =>{
 
+        if (res && res["name"]) {
+          const insertID = res["name"];
+          const data = Object.assign({id: insertID}, this.addProductForm.value);
+          ProductsService.onProductSave.emit(data);
+          alert("Updated Successfully");
+        } else {
+          alert("Updated Failed");
+        }
+
+        this.matDialogRef.close('save');
+      },
+      error:()=>{
+        alert("Error while adding the product")
+      }
     })
   }
 
