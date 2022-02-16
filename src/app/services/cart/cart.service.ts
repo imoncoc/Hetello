@@ -43,5 +43,8 @@ export class CartService {
     return this.http.delete(`${this._cartApiFirebase}/${id}.json`);
   }
 
+  getCartById(id: string): Observable<CartItem>{
+    return this.http.get<CartItem>(`${this._cartApiFirebase}/${id}.json`);
+  }
 
 }

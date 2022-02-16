@@ -8,6 +8,7 @@ import {
 } from '@angular/material/snack-bar';
 import { CartService } from '../services/cart/cart.service';
 import { MessageService } from '../services/message/message.service';
+import { ProductsService } from '../services/products/products.service';
 import { CartItem } from '../shared/models/cartItem';
 import { Products } from '../shared/models/products';
 
@@ -20,7 +21,8 @@ export class CartComponent implements OnInit {
   cartItems: Array<CartItem> = [];
   cartTotal: number = 0;
   // _cartApi = 'http://localhost:3000/cart';
-  _cartApiFirebase = "https://hetello-e-commarce-default-rtdb.firebaseio.com/cart";
+  _cartApiFirebase =
+    'https://hetello-e-commarce-default-rtdb.firebaseio.com/cart';
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
@@ -93,6 +95,7 @@ export class CartComponent implements OnInit {
       this.cartItems = items;
       this.calcCartTotal();
       this.reloadHeader(this.cartItems.length);
+      ProductsService.onCartUpdate.emit({ status: 'Success' });
     });
   }
 
@@ -105,20 +108,21 @@ export class CartComponent implements OnInit {
   calcCartTotal() {
     this.cartTotal = 0;
     this.cartItems.forEach((item: CartItem) => {
-      this.cartTotal += (item.quantity * item.price);
+      this.cartTotal += item.quantity * item.price;
     });
   }
 
   clearCart() {
     this.cartItems.forEach((item: CartItem) => {
       this.http
-         .delete(`${this._cartApiFirebase}/${item.id}.json`)
+        .delete(`${this._cartApiFirebase}/${item.id}.json`)
         // .delete(this._cartApi + "/" + item.id)
-        .subscribe((res: any) => {});
+        .subscribe((res: any) => {
+          this.cartItems = [];
+          ProductsService.onCartUpdate.emit({ status: 'Success' });
+          this.reloadHeader(this.cartItems.length);
+        });
     });
-
-    this.cartItems = [];
-    this.reloadHeader(this.cartItems.length);
   }
 
   openSnackBar(message: any) {
@@ -129,7 +133,7 @@ export class CartComponent implements OnInit {
     });
   }
 
-  reloadHeader(result: number){
+  reloadHeader(result: number) {
     this.msg.sendTotalCartItem(result);
   }
 }

@@ -18,6 +18,7 @@ import { CartItem } from 'src/app/shared/models/cartItem';
 })
 export class ProductDetailsComponent implements OnInit {
    dataSource: Products = new Products();
+   productId: string = '';
 
    @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
    horizontalPosition: MatSnackBarHorizontalPosition = 'center';
@@ -33,9 +34,10 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      const id = params['id'];
+      this.productId = params['id'];
 
-      this.productsService.getProductById(id).subscribe((product: Products) => {
+      this.productsService.getProductById(this.productId).subscribe((product: Products) => {
+        product.id = this.productId;
         this.dataSource = product;
       })
     })
@@ -45,24 +47,32 @@ export class ProductDetailsComponent implements OnInit {
   handleAddToCart(){
     this.msg.sendMsg(this.dataSource);
 
-    let cartData: CartItem = {
-      productId: this.dataSource.id,
-      productName: this.dataSource.name,
-      quantity: 1,
-      price: this.dataSource.price,
-      imageUrl: this.dataSource.imageUrl
-    }
-
-    this.cartService.addProductToCart(cartData).subscribe((resp) =>{
-      if(resp) {
-        ProductsService.onCartUpdate.emit({status: "Success"});
-        // this.cartItems[cartIndex] = cartData;
-        // this.calcCartTotal();
-        this.openSnackBar();
+    this.cartService.getCartById(this.dataSource.id).subscribe(result => {
+      debugger
+      if (result) {
 
       }
-    })
+      else {
+        let cartData: CartItem = {
+          id: this.dataSource.id,
+          productId: this.dataSource.id,
+          productName: this.dataSource.name,
+          quantity: 1,
+          price: this.dataSource.price,
+          imageUrl: this.dataSource.imageUrl
+        }
 
+        this.cartService.addProductToCart(cartData).subscribe((resp) =>{
+          if(resp) {
+            ProductsService.onCartUpdate.emit({status: "Success"});
+            // this.cartItems[cartIndex] = cartData;
+            // this.calcCartTotal();
+            this.openSnackBar();
+
+          }
+        })
+      }
+    })
   }
 
   // openSnackBar(message: any, action: any){
