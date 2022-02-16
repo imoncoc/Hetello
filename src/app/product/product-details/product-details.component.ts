@@ -48,7 +48,6 @@ export class ProductDetailsComponent implements OnInit {
     this.msg.sendMsg(this.dataSource);
 
     this.cartService.getCartById(this.dataSource.id).subscribe(result => {
-      debugger
       if (result) {
 
       }

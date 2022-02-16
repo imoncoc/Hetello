@@ -22,12 +22,12 @@
 
 <div class="container" *ngIf="cartItems && cartItems.length <= 0" class="my-5">
   <div class="row">
-    <div class="col p-5 ">
+    <div class="col p-5">
       <div class="card p-2 empty-cart">
         <h5 class="card-title mt-3 ms-3">My Cart</h5>
 
         <div class="mx-auto">
-          <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+          <img class="img-fluid" src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
 
 
         </div>
@@ -45,45 +45,47 @@
 
 
 
-<div class="margin-top">
-  <div class="container-own" *ngIf="cartItems && cartItems.length > 0">
-    <ul>
-      <li *ngFor="let cartItem of cartItems">
-        <div>
-          <img [src]="cartItem.imageUrl" [alt]="cartItem.productName">
-        </div>
-        <div >
-          <a routerLink="/products/{{cartItem.productId}}" style="text-decoration: none !important; color: #370617;">
-            {{ cartItem.productName }}
-          </a>
-        </div>
+<div class="container">
+  <div class="margin-top">
+    <div class="container-own" *ngIf="cartItems && cartItems.length > 0">
+      <ul>
+        <li *ngFor="let cartItem of cartItems">
+          <div>
+            <img [src]="cartItem.imageUrl" [alt]="cartItem.productName">
+          </div>
+          <div >
+            <a routerLink="/products/{{cartItem.productId}}" style="text-decoration: none !important; color: #370617;">
+              {{ cartItem.productName }}
+            </a>
+          </div>
 
-        <div>
-          {{cartItem.quantity}}
-        </div>
+          <div>
+            {{cartItem.quantity}}
+          </div>
 
-        <div>
-          {{ cartItem.price | currency }}
-        </div>
+          <div>
+            {{ cartItem.price | currency }}
+          </div>
 
-        <div>
-          {{ cartItem.price * cartItem.quantity | currency }}
-        </div>
+          <div>
+            {{ cartItem.price * cartItem.quantity | currency }}
+          </div>
 
-        <div>
-          <button class="remove-button" (click)="deleteSingleProduct(cartItem.id)" (click)="openSnackBar('Product Remove Successfull!')">Remove</button>
-        </div>
-      </li>
-    </ul>
+          <div>
+            <button class="remove-button" (click)="deleteSingleProduct(cartItem.id)" (click)="openSnackBar('Product Remove Successfull!')">Remove</button>
+          </div>
+        </li>
+      </ul>
 
-    <div class="checkout sticky-top">
-      <div>
-        <div class="foods-count"> {{cartItems.length}} </div>
-        <div class="total-price mb-3"> {{cartTotal | currency}} </div>
-        <button mat-raised-button color="warn" (click)="clearCart()" (click)="openSnackBar('Clear Cart Successfull')">Clear Cart</button>
-        <button mat-raised-button color="primary" class="mt-2" (click)="openSnackBar('Comming Soon')">Check Out</button>
+      <div class="checkout sticky-top">
+        <div>
+          <div class="foods-count"> {{cartItems.length}} </div>
+          <div class="total-price mb-3"> {{cartTotal | currency}} </div>
+          <button mat-raised-button color="warn" (click)="clearCart()" (click)="openSnackBar('Clear Cart Successfull')">Clear Cart</button>
+          <button mat-raised-button color="primary" class="mt-2" (click)="openSnackBar('Comming Soon')">Check Out</button>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
